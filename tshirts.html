@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/product/">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<html>
+<head>
+<title>0121STREETWEAR</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-image: url('header-background1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.description {
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+}
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+  display: inline-block
+}
+
+.resp-sharing-button__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.5em
+}
+
+.resp-sharing-button {
+  border-radius: 5px;
+  transition: 25ms ease-out;
+  padding: 0.5em 0.75em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+}
+
+.resp-sharing-button__icon svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: top
+}
+
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
+}
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon {
+  stroke: #fff;
+  fill: none
+}
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+  fill: #fff;
+  stroke: none
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee
+}
+
+.resp-sharing-button--twitter:hover {
+  background-color: #2795e9
+}
+
+.resp-sharing-button--pinterest {
+  background-color: #bd081c
+}
+
+.resp-sharing-button--pinterest:hover {
+  background-color: #8c0615
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998
+}
+
+.resp-sharing-button--facebook:hover {
+  background-color: #2d4373
+}
+
+.resp-sharing-button--tumblr {
+  background-color: #35465C
+}
+
+.resp-sharing-button--tumblr:hover {
+  background-color: #222d3c
+}
+
+.resp-sharing-button--reddit {
+  background-color: #5f99cf
+}
+
+.resp-sharing-button--reddit:hover {
+  background-color: #3a80c1
+}
+
+.resp-sharing-button--google {
+  background-color: #dd4b39
+}
+
+.resp-sharing-button--google:hover {
+  background-color: #c23321
+}
+
+.resp-sharing-button--linkedin {
+  background-color: #0077b5
+}
+
+.resp-sharing-button--linkedin:hover {
+  background-color: #046293
+}
+
+.resp-sharing-button--email {
+  background-color: #777
+}
+
+.resp-sharing-button--email:hover {
+  background-color: #5e5e5e
+}
+
+.resp-sharing-button--xing {
+  background-color: #1a7576
+}
+
+.resp-sharing-button--xing:hover {
+  background-color: #114c4c
+}
+
+.resp-sharing-button--whatsapp {
+  background-color: #25D366
+}
+
+.resp-sharing-button--whatsapp:hover {
+  background-color: #1da851
+}
+
+.resp-sharing-button--hackernews {
+background-color: #FF6600
+}
+.resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {   background-color: #FB6200 }
+
+.resp-sharing-button--vk {
+  background-color: #507299
+}
+
+.resp-sharing-button--vk:hover {
+  background-color: #43648c
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
+  background-color: #2d4373;
+  border-color: #2d4373;
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
+  background-color: #2795e9;
+  border-color: #2795e9;
+}
+
+.resp-sharing-button--tumblr {
+  background-color: #35465C;
+  border-color: #35465C;
+}
+
+.resp-sharing-button--tumblr:hover,
+.resp-sharing-button--tumblr:active {
+  background-color: #222d3c;
+  border-color: #222d3c;
+}
+
+.resp-sharing-button--email {
+  background-color: #777777;
+  border-color: #777777;
+}
+
+.resp-sharing-button--email:hover,
+.resp-sharing-button--email:active {
+  background-color: #5e5e5e;
+  border-color: #5e5e5e;
+}
+
+.resp-sharing-button--pinterest {
+  background-color: #bd081c;
+  border-color: #bd081c;
+}
+
+.resp-sharing-button--pinterest:hover,
+.resp-sharing-button--pinterest:active {
+  background-color: #8c0615;
+  border-color: #8c0615;
+}
+</style>
+<link rel="icon" href="ico.ico" type="image/ico" sizes="16x16">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script>
+function addtocart() {
+  alert("Item added to cart!");
+}
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- NAVBAR BEGIN -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">0121 STREETWEAR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item m-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+				 <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="tshirts.html">T-Shirts</a>
+		  <a class="dropdown-item" href="#">Shirts</a>
+		  <a class="dropdown-item" href="#">Hoodies</a>
+		  <a class="dropdown-item" href="#">Coats</a>
+          <a class="dropdown-item" href="shoes.html">Shoes</a>
+          <a class="dropdown-item" href="#">Trousers</a>
+        </div>
+      </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-secondary btn-number">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+				<a class="btn btn-primary btn-sm ml-3" href="login.html">
+                <i class="fa fa-user"></i> Account
+                </a>
+                <a class="btn btn-info btn-sm ml-3" href="cart.html">
+                    <i class="fa fa-shopping-cart"></i> Cart
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- NAVBAR END -->   
+   <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">T-Shirts</h1>
+          <p class="lead text-muted">We have a wide range of designs in from a plethora of brands ranging from Dickies to Levis, Nike to Converse</p>
+        </div>
+      </section>
+
+      <div class="album py-5">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="shirt2.jpg" alt="Card image cap">
+                <div class="card-body">
+				<h3>Bling OG Reaper</h3>
+       <h5>£25</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                 
+					<button onclick="addtocart()" type="button" class="btn btn-outline-dark btn-sm btn-block" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i>Add To Basket</button>
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+           <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="shirt1.jpg" alt="Card image cap">
+                <div class="card-body">
+				<h3>Primitive Palms</h3>
+       <h5>£35</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                 
+<button onclick="addtocart()" type="button" class="btn btn-outline-dark btn-sm btn-block" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i>Add To Basket</button>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="shirt3.jpg" alt="Card image cap">
+                <div class="card-body">
+				<h3>Madness Seal</h3>
+       <h5>£65</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                 
+<button onclick="addtocart()" type="button" class="btn btn-outline-dark btn-sm btn-block" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i>Add To Basket</button>    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="shirt4.jpg" alt="Card image cap">
+                <div class="card-body">
+				<h3>Primitive Beacon</h3>
+       <h5>£20</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                 
+<button onclick="addtocart()" type="button" class="btn btn-outline-dark btn-sm btn-block" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i>Add To Basket</button>    
+                  </div>
+                </div>
+              </div>
+            </div>
+           <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="shirt5.jpg" alt="Card image cap">
+                <div class="card-body">
+				<h3>Vans Early Departure</h3>
+       <h5>£20</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                 
+<button onclick="addtocart()" type="button" class="btn btn-outline-dark btn-sm btn-block" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i>Add To Basket</button>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="shirt6.jpg" alt="Card image cap">
+                <div class="card-body">
+				<h3>RIPNDIP Nermio</h3>
+       <h5>£15</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                 
+<button onclick="addtocart()" type="button" class="btn btn-outline-dark btn-sm btn-block" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i>Add To Basket</button>    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            
+            
+          </div>
+        </div>
+      </div>
+
+    </main>
+	<!-- FOOTER SECTION BEGIN -->
+<hr>
+<footer class="page-footer font-small stylish-color-dark pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">0121 STREETWEAR</h5>
+        <p>Thanks for checking out the site! Feel free to check some of the following links if you're stuck and need help.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About Us</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Our Stores</a>
+          </li>
+          <li>
+            <a href="#!">Our Brands</a>
+          </li>
+          <li>
+            <a href="#!">Affiliates</a>
+          </li>
+          <li>
+            <a href="#!">Feedback</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Community</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Blog</a>
+          </li>
+          <li>
+            <a href="#!">Skate Team</a>
+          </li>
+          <li>
+            <a href="#!">Vouchers</a>
+          </li>
+          <li>
+            <a href="#!">Competitions</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Customer Service</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">My Account</a>
+          </li>
+          <li>
+            <a href="#!">FAQs</a>
+          </li>
+          <li>
+            <a href="#!">Delivery & Returns</a>
+          </li>
+          <li>
+            <a href="#!">Help & Contact</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+  <hr>
+  <!-- Social buttons -->
+  <ul class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1">
+        <i class="fa fa-facebook-f"> </i>
+		
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-tw mx-1">
+        <i class="fa fa-twitter"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-gplus mx-1">
+        <i class="fa fa-google-plus"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-li mx-1">
+        <i class="fa fa-linkedin"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-dribbble mx-1">
+        <i class="fa fa-dribbble"> </i>
+      </a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+</footer>
+<!-- Footer END -->
+<br>
+<body>
